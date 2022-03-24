@@ -136,3 +136,5 @@ formatted_total_config.py
 total_config.py
 
 .vscode
+*.mp4
+*.zip

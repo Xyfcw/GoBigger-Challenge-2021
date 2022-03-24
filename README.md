@@ -2,9 +2,9 @@
 
 [en](https://github.com/opendilab/GoBigger-Challenge-2021/blob/main/README.md) / [中文](https://github.com/opendilab/GoBigger-Challenge-2021/blob/main/README_zh.md)
 
-## Challenge Description
+* 2021.11.13 We are holding a [challenge](https://www.datafountain.cn/competitions/549/) —— 2021 "AI BOB：Go-Bigger Multi-Agent Decision Intelligence Challenge". Come and make your agents in the game!
 
-* 2021.11.13 We are holding a [competition](https://www.datafountain.cn/competitions/549/) —— Go-Bigger: Multi-Agent Decision Intelligence Challenge. Come and make your agents in the game!
+## Challenge Description
 
 Multi-agent confrontation is an important part of decision intelligence AI, and it is also a very challenging problem. In order to enrich the multi-agent confrontation environment, OpenDILab has developed a multi-agent confrontation competitive game, named GoBigger. Based on GoBigger, the purpose of this challenge is to explore the research of multi-agent games and promote the training of technical talents in the fields of decision intelligence, so as to create a "global leading", "original" and "open" decision intelligence AI open source technology ecosystem.
 
@@ -33,7 +33,7 @@ class BaseSubmission:
         raise NotImplementedError
 ```
 
-Note that all submission should extend with `BaseSubmission`. We will provide `team_name` and `player_names` for each submission as their basic parameters. `team_names` means the name of team which this submission controls. We also know that there are several players in a team, which is relative with the `player_names` in the parameters. We will call `get_actions()` when we try to get actions from this submission. So that participants should implements `get_actions()` in their submission. This function will receive `obs` as its parameters, which is similar with what we provide in [tutorial](https://opendilab.github.io/GoBigger/tutorial/space.html#space). For example, submissions will get `obs` as following:
+Note that all submission should extend with `BaseSubmission`. We will provide `team_name` and `player_names` for each submission as their basic parameters. `team_names` means the name of team which this submission controls. We also know that there are several players in a team, which is relative with the `player_names` in the parameters. We will call `get_actions()` when we try to get actions from this submission. So that participants should implements `get_actions()` in their submission. This function will receive `obs` as its parameters, which is similar with what we provide in [tutorial](https://gobigger.readthedocs.io/en/latest/tutorial/space.html#observation-space). For example, submissions will get `obs` as following:
 
 ```python
 global_state, player_state = obs
@@ -83,7 +83,7 @@ After getting the `obs`, submissions should return `actions` in `get_actions()`.
 }
 ```
 
-Remember that both `player_a` and `player_b` should be the name in your submission's `player_names`. And `actions_a` should be a list, which contains there items, which are the same with what we propose in [action-space](https://opendilab.github.io/GoBigger/tutorial/space.html#action-space).
+Remember that both `player_a` and `player_b` should be the name in your submission's `player_names`. And `actions_a` should be a list, which contains there items, which are the same with what we propose in [action-space](https://gobigger.readthedocs.io/en/latest/tutorial/space.html#action-space).
 
 
 ### Examples and Test
